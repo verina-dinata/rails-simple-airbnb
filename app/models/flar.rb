@@ -1,0 +1,2 @@
+class Flar < ApplicationRecord
+end
