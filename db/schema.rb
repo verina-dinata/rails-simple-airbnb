@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_30_073510) do
-  create_table "flars", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2022_07_30_080023) do
+  create_table "flats", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.text "description"

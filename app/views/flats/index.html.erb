@@ -1,0 +1,25 @@
+<div class="container">
+
+  <h1>All our Flats </h1>
+  <p>All <%= @flats.length %> flats.</p>
+
+
+  <div class="row justify-content-between">
+
+    <% @flats.each do |flat| %>
+      <div class="card col-4" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h6><%= flat.name %></h6>
+          <p><%= flat.address %></p>
+          <i class="fa-solid fa-people-group"><%= flat.number_of_guests %></i>
+          <i class="fa-solid fa-dollar-sign"><%= flat.price_per_night %></i>
+          <div class="footer">
+            <%= link_to "More info", flat_path(flat) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
