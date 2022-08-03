@@ -8,7 +8,7 @@
 
     <% @flats.each do |flat| %>
       <div class="card col-4" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src= "../../images/logo.png" alt="Card image cap" width="90" height="70">
         <div class="card-body">
           <h6><%= flat.name %></h6>
           <p><%= flat.address %></p>
@@ -16,6 +16,8 @@
           <i class="fa-solid fa-dollar-sign"><%= flat.price_per_night %></i>
           <div class="footer">
             <%= link_to "More info", flat_path(flat) %>
+            <%= link_to "Edit", edit_flat_path(flat) %>
+            <%= link_to "Remove", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           </div>
         </div>
       </div>

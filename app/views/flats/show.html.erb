@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <%= link_to "Edit", edit_flat_path(@flat) %>
+      <%= link_to "Remove", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+
+      <h4>A bit more about this flat...</h4>
+      <p><%= @flat.description %></p>
+
+      <h4>Details</h4>
+      <i class="fa-solid fa-people-group"><%= @flat.number_of_guests %></i>
+      <i class="fa-solid fa-dollar-sign"><%= @flat.price_per_night %></i>
+    </div>
+    <div class="col-4">
+      <h5>Book this place!</h5>
+    </div>
+  </div>
+</div>
